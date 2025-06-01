@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Happy Birthday</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Happy Birthday">
+    <meta name="robots" content="index, follow" />
+    <link rel="author" href="https://plus.google.com/u/1/+SaptheshV/" />
+    <meta name="keywords" content="Birthday, Happy">
+    <meta property="og:type" content="E-Greeting" />
+    <meta property="og:image" content="favicon.ico" />
+    <meta property="og:description" content="Wish you a very Happy Birthday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE:8; IE:7; IE=EDGE" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="loading.css">
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet/less" href="cake.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+
+    <style>
+        /* Custom styles for the surprise button */
+        .surprise-link-style {
+            background-color: #FF69B4; /* Hot pink */
+            color: white !important; /* !important to override Bootstrap if needed */
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+            display: inline-block; /* Ensure padding and sizing works */
+            border: none; /* Remove default button border */
+        }
+
+        .surprise-link-style:hover {
+            transform: translateY(-3px); /* Subtle lift on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-decoration: none; /* Keep text-decoration none on hover */
+            color: white !important; /* Ensure color remains white on hover */
+        }
+    </style>
+</head>
+
+<body class="hide-content"> <div class="loading"></div>
+    <audio class="song" controls loop>
+        <source src="hbd.mp3"></source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+
+    <div id="countdown-container">
+        <div class="dots-bg">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="countdown-card">
+            <h1 id="countdown-title">Birthday Countdown</h1>
+            <div id="countdown-units">
+                <div class="countdown-unit">
+                    <span id="days-value" class="countdown-value">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="hours-value" class="countdown-value">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="minutes-value" class="countdown-value">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="seconds-value" class="countdown-value">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <p id="countdown-message-bottom">Until the big day!</p>
+        </div>
+    </div>
+
+    <div class="balloons text-center" id="b1">
+        <h2 style="color:#F2B300;">R</h2>
+    </div>
+    <div class="balloons text-center" id="b2">
+        <h2 style="color:#0719D4;">A</h2>
+    </div>
+    <div class="balloons text-center" id="b3">
+        <h2 style="color:#D14D39;">K</h2>
+    </div>
+    <div class="balloons text-center" id="b4">
+        <h2 style="color:#8FAD00;">S</h2>
+    </div>
+    <div class="balloons text-center" id="b5">
+        <h2 style="color:#8377E4;">H</h2>
+    </div>
+    <div class="balloons text-center" id="b6">
+        <h2 style="color:#99C96A;">I</h2>
+    </div>
+    <div class="balloons text-center" id="b7">
+        <h2 style="color:#20CFB4;">T</h2>
+    </div>
+
+    <img src="Balloon-Border.png" width="100%" class="balloon-border">
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_yellow"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_red"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_blue"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_green"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_pink"></div>
+            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder">
+                <div class="bulb" id="bulb_orange"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="banner.png" class="bannar">
+            </div>
+        </div>
+        <div class="row cake-cover">
+            <div class="col-md-12 texr-center">
+                <div class="cake">
+                    <div class="velas">
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                    </div>
+                    <div class="cobertura"></div>
+                    <div class="bizcocho"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row message">
+            <div class="col-md-12">
+                <p>Today feels like any other day...</p>
+                <p>but somehow, it's different</p>
+                <p>another year has passed</p>
+                <p>like a blink of an eye</p>
+                <p><strong>and yet</strong></p>
+                <p>this day stands out</p>
+                <p>because today...</p>
+                <p>is your special day</p>
+                <p>and we, your friends...</p>
+                <p>have shared beautiful memories with you</p>
+                <p>the laughs, the talks, the little moments</p>
+                <p>have become unforgettable</p>
+                <p>and today...</p>
+                <p>we just wanted to pause</p>
+                <p>to say thank you</p>
+                <p>for being the amazing person you are</p>
+                <p>for all the joy you've shared with us</p>
+                <p>for the energy you bring to our group</p>
+                <p>so this birthday</p>
+                <p>we came together...</p>
+                <p>to give you this small present</p>
+                <p>from all of us, with all our hearts</p>
+                <p>because you truly deserve it</p>
+                <p>we wish you the best life has to offer</p>
+                <p>may your dreams stay alive</p>
+                <p>and your spirit fly high</p>
+                <p>like a free bird in the open sky</p>
+                <p>and even though life will bring changes...</p>
+                <p>new challenges, new stories</p>
+                <p>just remember...</p>
+                <p>God is always with you</p>
+                <p>and so are we</p>
+                <p>this year will be better</p>
+                <p>filled with happiness, success, and growth</p>
+                <p>keep shining, keep smiling</p>
+                <p>live every moment today</p>
+                <p>and make it unforgettable</p>
+                <p>because you are truly special to us</p>
+                <p>and finally...</p>
+                <p>we all want to say it loud</p>
+                <p><strong>Happy Birthday, Sapthesh V 🎉</strong></p>
+                <p>With love,</p>
+                <p>Your gang 💛</p>
+
+            </div>
+        </div>
+
+    </div> <div class="navbar navbar-fixed-bottom">
+        <div class="row">
+            <div class="col-md-6 text-center col-md-offset-3">
+                <button class="btn btn-primary" id="turn_on">Turn On Lights</button>
+                <button class="btn btn-primary" id="play">Play Music</button>
+                <button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
+                <button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
+                <button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
+                <button class="btn btn-primary" id="light_candle"> Light Candle</button>
+                <button class="btn btn-primary" id="wish_message">Happy Birthday</button>
+                <button class="btn btn-primary" id="story">A message for you</button>
+
+                <button href="/pages/index.html" class="btn btn-primary" id="extra_page" style="display: none;" target="_blank">Go to Extra Page</button>
+
+                <button class="btn btn-primary surprise-link-style" id="surprise_trigger_button" style="display: none;">
+                    🎁 Tap for a surprise! 🎂
+                </button>
+
+                <a href="/pages/index.html" target="_blank" class="surprise-link-style" id="actual_surprise_link" style="display: none;">
+                    Open your Birthday Surprise!
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="effect.js"></script>
+<script>
+    $(document).ready(function() {
+        const surpriseTriggerButton = $('#surprise_trigger_button');
+        const actualSurpriseLink = $('#actual_surprise_link');
+
+        surpriseTriggerButton.click(function() {
+            $(this).hide();
+            actualSurpriseLink.fadeIn(500);
+        });
+    });
+</script>
+</html>

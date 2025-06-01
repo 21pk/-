@@ -1,0 +1,149 @@
+.letter-section {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe0eb 100%);
+}
+
+.letter-container {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.letter-content {
+    padding: 3rem;
+    background: url('../images/paper-texture.png') repeat;
+}
+
+.letter-content h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.letter-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.letter-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: right;
+    margin-top: 3rem;
+}
+
+/* Response Form */
+.response-form {
+    padding: 2rem;
+    background: var(--background-color);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.response-form h4 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#senderName {
+    padding: 0.8rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+#messageText {
+    padding: 0.8rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    min-height: 120px;
+    resize: vertical;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#messageForm button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#messageForm button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+.letter-content {
+    animation: fadeIn 1s ease;
+}
+
+.response-form {
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-content {
+        padding: 2rem;
+    }
+
+    .letter-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .letter-signature {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-content {
+        padding: 1.5rem;
+    }
+
+    .letter-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .letter-content p {
+        font-size: 1rem;
+    }
+
+    .letter-signature {
+        font-size: 1.2rem;
+    }
+
+    .response-form {
+        padding: 1.5rem;
+    }
+}
