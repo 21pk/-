@@ -4,7 +4,7 @@ $(window).load(function(){
     // For testing, setting to June 2nd, 2025, 12:00:00 AM (midnight IST)
     // To test the countdown, set this to a time a few minutes/seconds in the future.
     // To test the post-countdown state, set this to a time in the past.
-    const birthdayDate = new Date('June 2, 2025 00:00:00'); // <--- CHANGE THIS FOR ACTUAL BIRTHDAY!
+    const birthdayDate = new Date('June 1, 2025 00:00:00'); // <--- CHANGE THIS FOR ACTUAL BIRTHDAY!
 
     const daysValue = $('#days-value');
     const hoursValue = $('#hours-value');
